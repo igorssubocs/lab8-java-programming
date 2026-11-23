@@ -1,29 +1,20 @@
 package exercise9.task3;
 
-public class Main
-{
-    public static void main(String[] args)
-    {
+public class Main {
+    public static void main(String[] args) {
         Account account1 = new Account(
                 "Igors Subocs",
                 1200,
                 "PL12341234123412341234"
         );
 
-        try
-        {
+        try {
             account1.transfer(150);
-        }
-        catch (NotEnoughMoneyException error)
-        {
+        } catch (NotEnoughMoneyException error) {
             System.out.println(error.getMessage());
-        }
-        catch (Exception error)
-        {
+        } catch (Exception error) {
             System.out.println(error);
-        }
-        finally
-        {
+        } finally {
             System.out.println(account1.getBalance());
         }
     }
